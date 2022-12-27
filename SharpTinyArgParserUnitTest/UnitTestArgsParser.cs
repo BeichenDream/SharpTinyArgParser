@@ -69,6 +69,13 @@ namespace SharpTinyArgParserUnitTest
             BoolType boolType6 = ArgsParser.ParseArgs<BoolType>(args6);
             Assert.IsTrue(boolType6.IsMan);
 
+            string[] args7 = { "-isMan" };
+            BoolType boolType7 = ArgsParser.ParseArgs<BoolType>(args7);
+            Assert.IsTrue(boolType7.IsMan);
+
+            string[] args8 = { "-isMan","-name","jack" };
+            BoolType boolType8 = ArgsParser.ParseArgs<BoolType>(args8);
+            Assert.IsTrue(boolType8.IsMan);
         }
         [TestMethod]
         public void TestParserStringArrayType()

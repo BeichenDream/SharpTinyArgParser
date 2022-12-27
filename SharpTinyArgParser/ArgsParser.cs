@@ -148,6 +148,7 @@ namespace SharpTinyArgParser
                         else if (propertyInfo.PropertyType == typeof(bool))
                         {
                             ParseArgsSetValue(value, propertyInfo, "true");
+                            requiredPropertyList.Remove(currentArgName);
                         }
                     }
                 }
